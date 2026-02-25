@@ -1,0 +1,294 @@
+-- ============================================
+-- 1. CUSTOMERS (20 rows)
+-- ============================================
+INSERT INTO Customers (customer_id, first_name, last_name, email, phone, created_at) VALUES
+(1, 'John', 'Doe', 'john.doe@email.com', '212-555-0101', '2023-11-15 09:23:00'),
+(2, 'Alice', 'Smith', 'alice.smith@email.com', '310-555-0202', '2023-11-28 14:45:00'),
+(3, 'Bob', 'Johnson', 'bob.johnson@email.com', '312-555-0303', '2023-12-03 11:12:00'),
+(4, 'Emma', 'Brown', 'emma.brown@email.com', '305-555-0404', '2023-12-17 16:30:00'),
+(5, 'Michael', 'Lee', 'michael.lee@email.com', '206-555-0505', '2023-12-22 10:15:00'),
+(6, 'Sarah', 'Wilson', 'sarah.w@email.com', '617-555-0606', '2024-01-05 13:40:00'),
+(7, 'David', 'Martinez', 'david.m@email.com', '210-555-0707', '2024-01-09 15:20:00'),
+(8, 'Lisa', 'Anderson', 'lisa.a@email.com', '303-555-0808', '2024-01-18 09:55:00'),
+(9, 'James', 'Taylor', 'james.t@email.com', '602-555-0909', '2024-01-25 11:30:00'),
+(10, 'Maria', 'Garcia', 'maria.g@email.com', '713-555-1010', '2024-02-02 14:10:00'),
+(11, 'Robert', 'Miller', 'robert.m@email.com', '215-555-1111', '2024-02-08 16:45:00'),
+(12, 'Jennifer', 'Davis', 'jennifer.d@email.com', '404-555-1212', '2024-02-14 10:20:00'),
+(13, 'William', 'Rodriguez', 'william.r@email.com', '504-555-1313', '2024-02-21 13:35:00'),
+(14, 'Elizabeth', 'Hernandez', 'elizabeth.h@email.com', '816-555-1414', '2024-03-01 15:50:00'),
+(15, 'Richard', 'Lopez', 'richard.l@email.com', '901-555-1515', '2024-03-07 09:10:00'),
+(16, 'Patricia', 'Gonzalez', 'patricia.g@email.com', '414-555-1616', '2024-03-12 12:25:00'),
+(17, 'Charles', 'Wilson', 'charles.w@email.com', '503-555-1717', '2024-03-19 17:00:00'),
+(18, 'Linda', 'Moore', 'linda.m@email.com', '612-555-1818', '2024-03-25 10:45:00'),
+(19, 'Joseph', 'Jackson', 'joseph.j@email.com', '704-555-1919', '2024-04-01 14:30:00'),
+(20, 'Susan', 'Martin', 'susan.m@email.com', '813-555-2020', '2024-04-04 11:55:00');
+
+-- ============================================
+-- 2. ADDRESSES (40 rows)
+-- ============================================
+INSERT INTO Addresses (address_id, customer_id, address_line, city, state, country, postal_code, address_type) VALUES
+(1, 1, '123 Main St, Apt 4B', 'New York', 'NY', 'USA', '10001', 'Shipping'),
+(2, 1, '123 Main St, Apt 4B', 'New York', 'NY', 'USA', '10001', 'Billing'),
+(3, 2, '456 Park Ave', 'Los Angeles', 'CA', 'USA', '90001', 'Shipping'),
+(4, 2, '789 Sunset Blvd, Suite 200', 'Los Angeles', 'CA', 'USA', '90002', 'Billing'),
+(5, 3, '22 Lake View Dr', 'Chicago', 'IL', 'USA', '60007', 'Shipping'),
+(6, 3, '22 Lake View Dr', 'Chicago', 'IL', 'USA', '60007', 'Billing'),
+(7, 4, '9 Ocean Drive', 'Miami', 'FL', 'USA', '33101', 'Shipping'),
+(8, 4, '9 Ocean Drive', 'Miami', 'FL', 'USA', '33101', 'Billing'),
+(9, 5, '55 King Street', 'Seattle', 'WA', 'USA', '98101', 'Shipping'),
+(10, 5, '55 King Street', 'Seattle', 'WA', 'USA', '98101', 'Billing'),
+(11, 6, '100 Beacon St', 'Boston', 'MA', 'USA', '02108', 'Shipping'),
+(12, 6, '200 Cambridge St', 'Boston', 'MA', 'USA', '02114', 'Billing'),
+(13, 7, '300 River Walk', 'San Antonio', 'TX', 'USA', '78205', 'Shipping'),
+(14, 7, '300 River Walk', 'San Antonio', 'TX', 'USA', '78205', 'Billing'),
+(15, 8, '400 Pearl St', 'Denver', 'CO', 'USA', '80209', 'Shipping'),
+(16, 8, '400 Pearl St', 'Denver', 'CO', 'USA', '80209', 'Billing'),
+(17, 9, '500 Camelback Rd', 'Phoenix', 'AZ', 'USA', '85018', 'Shipping'),
+(18, 9, '600 Indian School Rd', 'Phoenix', 'AZ', 'USA', '85016', 'Billing'),
+(19, 10, '700 Main St', 'Houston', 'TX', 'USA', '77002', 'Shipping'),
+(20, 10, '700 Main St', 'Houston', 'TX', 'USA', '77002', 'Billing'),
+(21, 11, '800 Walnut St', 'Philadelphia', 'PA', 'USA', '19103', 'Shipping'),
+(22, 11, '800 Walnut St', 'Philadelphia', 'PA', 'USA', '19103', 'Billing'),
+(23, 12, '900 Peachtree St', 'Atlanta', 'GA', 'USA', '30303', 'Shipping'),
+(24, 12, '1000 Piedmont Ave', 'Atlanta', 'GA', 'USA', '30309', 'Billing'),
+(25, 13, '1100 Canal St', 'New Orleans', 'LA', 'USA', '70112', 'Shipping'),
+(26, 13, '1100 Canal St', 'New Orleans', 'LA', 'USA', '70112', 'Billing'),
+(27, 14, '1200 Grand Blvd', 'Kansas City', 'MO', 'USA', '64106', 'Shipping'),
+(28, 14, '1200 Grand Blvd', 'Kansas City', 'MO', 'USA', '64106', 'Billing'),
+(29, 15, '1300 Beale St', 'Memphis', 'TN', 'USA', '38103', 'Shipping'),
+(30, 15, '1400 Union Ave', 'Memphis', 'TN', 'USA', '38104', 'Billing'),
+(31, 16, '1500 Wisconsin Ave', 'Milwaukee', 'WI', 'USA', '53202', 'Shipping'),
+(32, 16, '1500 Wisconsin Ave', 'Milwaukee', 'WI', 'USA', '53202', 'Billing'),
+(33, 17, '1600 Broadway', 'Portland', 'OR', 'USA', '97201', 'Shipping'),
+(34, 17, '1600 Broadway', 'Portland', 'OR', 'USA', '97201', 'Billing'),
+(35, 18, '1700 Hennepin Ave', 'Minneapolis', 'MN', 'USA', '55403', 'Shipping'),
+(36, 18, '1800 Lake St', 'Minneapolis', 'MN', 'USA', '55408', 'Billing'),
+(37, 19, '1900 Tryon St', 'Charlotte', 'NC', 'USA', '28202', 'Shipping'),
+(38, 19, '1900 Tryon St', 'Charlotte', 'NC', 'USA', '28202', 'Billing'),
+(39, 20, '2000 Bayshore Blvd', 'Tampa', 'FL', 'USA', '33606', 'Shipping'),
+(40, 20, '2000 Bayshore Blvd', 'Tampa', 'FL', 'USA', '33606', 'Billing');
+
+-- ============================================
+-- 3. CATEGORIES (8 rows)
+-- ============================================
+INSERT INTO Categories (category_id, category_name) VALUES
+(1, 'Electronics'),
+(2, 'Clothing'),
+(3, 'Books'),
+(4, 'Home Appliances'),
+(5, 'Sports & Outdoors'),
+(6, 'Beauty & Personal Care'),
+(7, 'Toys & Games'),
+(8, 'Automotive');
+
+-- ============================================
+-- 4. PRODUCTS (25 rows)
+-- ============================================
+INSERT INTO Products (product_id, product_name, description, price, stock, category_id) VALUES
+(1, 'Laptop Pro 15"', '15-inch business laptop, 16GB RAM, 512GB SSD', 899.99, 25, 1),
+(2, 'Smartphone X12', 'Latest 5G smartphone, 128GB storage', 699.99, 40, 1),
+(3, 'Cotton T-Shirt', '100% cotton casual t-shirt, various colors', 19.99, 200, 2),
+(4, 'Slim Fit Jeans', 'Blue denim jeans, stretch fit', 49.99, 85, 2),
+(5, 'SQL Mastery Guide', 'Comprehensive SQL programming guide', 34.99, 50, 3),
+(6, 'Microwave Oven', '900W countertop microwave with grill', 159.99, 20, 4),
+(7, 'Noise Cancelling Headphones', 'Wireless BT headphones with ANC', 149.99, 35, 1),
+(8, 'Yoga Mat', 'Eco-friendly non-slip yoga mat', 29.99, 60, 5),
+(9, 'Running Shoes', 'Men''s lightweight running shoes', 89.99, 45, 5),
+(10, 'Digital Camera', '24MP mirrorless camera with lens', 549.99, 15, 1),
+(11, 'Coffee Maker', 'Programmable 12-cup coffee maker', 79.99, 30, 4),
+(12, 'Bluetooth Speaker', 'Waterproof portable speaker', 59.99, 55, 1),
+(13, 'Winter Jacket', 'Insulated waterproof jacket', 129.99, 25, 2),
+(14, 'Python Cookbook', 'Advanced Python programming recipes', 44.99, 40, 3),
+(15, 'Hair Dryer', 'Ionic professional hair dryer', 39.99, 35, 6),
+(16, 'Basketball', 'Official size indoor/outdoor basketball', 24.99, 80, 5),
+(17, 'LEGO Creator Set', '500+ piece building set', 54.99, 30, 7),
+(18, 'Car Vacuum Cleaner', '12V portable car vacuum', 34.99, 25, 8),
+(19, 'Smart Watch', 'Fitness tracker with heart monitor', 199.99, 30, 1),
+(20, 'Desk Lamp', 'LED desk lamp with wireless charger', 44.99, 40, 4),
+(21, 'Board Game', 'Strategy board game for family', 39.99, 25, 7),
+(22, 'Shampoo Set', 'Organic shampoo and conditioner set', 24.99, 60, 6),
+(23, 'Tire Inflator', 'Portable air compressor for cars', 49.99, 20, 8),
+(24, 'Dumbbell Set', '10kg adjustable dumbbells pair', 79.99, 15, 5),
+(25, 'E-Reader', '6" glare-free display, 8GB storage', 119.99, 30, 1);
+
+-- ============================================
+-- 5. ORDERS (30 rows)
+-- ============================================
+INSERT INTO Orders (order_id, customer_id, order_date, status, shipping_address_id, billing_address_id, total_amount) VALUES
+(1, 1, '2024-01-15 10:23:00', 'Delivered', 1, 2, 969.97),
+(2, 2, '2024-01-17 14:45:00', 'Delivered', 3, 4, 729.98),
+(3, 3, '2024-01-20 09:12:00', 'Shipped', 5, 6, 109.98),
+(4, 4, '2024-01-22 16:30:00', 'Delivered', 7, 8, 159.99),
+(5, 5, '2024-01-25 11:20:00', 'Delivered', 9, 10, 234.98),
+(6, 6, '2024-01-28 13:45:00', 'Shipped', 11, 12, 179.98),
+(7, 7, '2024-02-01 10:15:00', 'Delivered', 13, 14, 89.99),
+(8, 8, '2024-02-03 15:30:00', 'Processing', 15, 16, 44.99),
+(9, 9, '2024-02-05 09:45:00', 'Delivered', 17, 18, 749.98),
+(10, 10, '2024-02-08 12:10:00', 'Shipped', 19, 20, 109.98),
+(11, 11, '2024-02-10 16:20:00', 'Delivered', 21, 22, 259.97),
+(12, 12, '2024-02-12 14:30:00', 'Delivered', 23, 24, 129.99),
+(13, 13, '2024-02-15 11:40:00', 'Shipped', 25, 26, 94.98),
+(14, 14, '2024-02-18 10:00:00', 'Processing', 27, 28, 54.99),
+(15, 15, '2024-02-20 15:15:00', 'Delivered', 29, 30, 249.98),
+(16, 16, '2024-02-23 13:25:00', 'Shipped', 31, 32, 79.99),
+(17, 17, '2024-02-25 09:30:00', 'Delivered', 33, 34, 149.99),
+(18, 18, '2024-02-28 14:50:00', 'Pending', 35, 36, 44.99),
+(19, 19, '2024-03-02 11:05:00', 'Delivered', 37, 38, 739.97),
+(20, 20, '2024-03-04 16:40:00', 'Processing', 39, 40, 119.99),
+(21, 1, '2024-03-07 10:55:00', 'Delivered', 1, 2, 119.98),
+(22, 2, '2024-03-09 13:20:00', 'Shipped', 3, 4, 34.99),
+(23, 3, '2024-03-12 09:35:00', 'Delivered', 5, 6, 224.98),
+(24, 4, '2024-03-15 15:45:00', 'Processing', 7, 8, 179.98),
+(25, 5, '2024-03-18 12:00:00', 'Shipped', 9, 10, 69.98),
+(26, 6, '2024-03-21 14:10:00', 'Delivered', 11, 12, 899.99),
+(27, 7, '2024-03-24 10:30:00', 'Pending', 13, 14, 199.99),
+(28, 8, '2024-03-27 16:15:00', 'Delivered', 15, 16, 89.98),
+(29, 9, '2024-03-30 11:50:00', 'Processing', 17, 18, 159.99),
+(30, 10, '2024-04-02 13:40:00', 'Shipped', 19, 20, 124.98);
+
+-- ============================================
+-- 6. ORDER_ITEMS (59 rows)
+-- ============================================
+INSERT INTO Order_Items (order_item_id, order_id, product_id, quantity, price) VALUES
+-- Order 1
+(1, 1, 1, 1, 899.99),
+(2, 1, 3, 2, 19.99),
+(3, 1, 5, 1, 34.99),
+-- Order 2
+(4, 2, 2, 1, 699.99),
+(5, 2, 12, 1, 29.99),
+-- Order 3
+(6, 3, 8, 2, 29.99),
+(7, 3, 16, 1, 24.99),
+-- Order 4
+(8, 4, 6, 1, 159.99),
+-- Order 5
+(9, 5, 4, 2, 49.99),
+(10, 5, 7, 1, 149.99),
+-- Order 6
+(11, 6, 11, 1, 79.99),
+(12, 6, 15, 2, 39.99),
+(13, 6, 22, 1, 24.99),
+-- Order 7
+(14, 7, 9, 1, 89.99),
+-- Order 8
+(15, 8, 20, 1, 44.99),
+-- Order 9
+(16, 9, 1, 1, 899.99),
+(17, 9, 19, 1, 199.99),
+-- Order 10
+(18, 10, 8, 2, 29.99),
+(19, 10, 24, 1, 49.99),
+-- Order 11
+(20, 11, 7, 1, 149.99),
+(21, 11, 12, 2, 29.99),
+(22, 11, 17, 1, 54.99),
+-- Order 12
+(23, 12, 13, 1, 129.99),
+-- Order 13
+(24, 13, 22, 2, 24.99),
+(25, 13, 15, 1, 39.99),
+-- Order 14
+(26, 14, 21, 1, 39.99),
+(27, 14, 23, 1, 34.99),
+-- Order 15
+(28, 15, 18, 1, 34.99),
+(29, 15, 25, 1, 119.99),
+(30, 15, 10, 1, 549.99),
+-- Order 16
+(31, 16, 20, 1, 44.99),
+(32, 16, 14, 1, 44.99),
+-- Order 17
+(33, 17, 7, 1, 149.99),
+-- Order 18
+(34, 18, 5, 1, 34.99),
+(35, 18, 3, 2, 19.99),
+-- Order 19
+(36, 19, 2, 1, 699.99),
+(37, 19, 19, 1, 199.99),
+-- Order 20
+(38, 20, 25, 1, 119.99),
+-- Order 21
+(39, 21, 11, 1, 79.99),
+(40, 21, 15, 1, 39.99),
+-- Order 22
+(41, 22, 22, 1, 24.99),
+(42, 22, 23, 1, 49.99),
+-- Order 23
+(43, 23, 4, 2, 49.99),
+(44, 23, 9, 1, 89.99),
+(45, 23, 3, 2, 19.99),
+-- Order 24
+(46, 24, 6, 1, 159.99),
+(47, 24, 11, 1, 79.99),
+-- Order 25
+(48, 25, 8, 1, 29.99),
+(49, 25, 16, 2, 24.99),
+-- Order 26
+(50, 26, 1, 1, 899.99),
+-- Order 27
+(51, 27, 19, 1, 199.99),
+-- Order 28
+(52, 28, 14, 1, 44.99),
+(53, 28, 20, 1, 44.99),
+-- Order 29
+(54, 29, 10, 1, 549.99),
+(55, 29, 25, 1, 119.99),
+-- Order 30
+(56, 30, 7, 1, 149.99),
+(57, 30, 12, 2, 29.99),
+(58, 30, 24, 1, 79.99);
+
+-- ============================================
+-- 7. PAYMENTS (30 rows)
+-- ============================================
+INSERT INTO Payments (payment_id, order_id, payment_date, amount, payment_method, payment_status) VALUES
+(1, 1, '2024-01-15 10:25:00', 969.97, 'Credit Card', 'Completed'),
+(2, 2, '2024-01-17 14:47:00', 729.98, 'PayPal', 'Completed'),
+(3, 3, '2024-01-20 09:15:00', 109.98, 'Credit Card', 'Completed'),
+(4, 4, '2024-01-22 16:32:00', 159.99, 'Debit Card', 'Completed'),
+(5, 5, '2024-01-25 11:22:00', 234.98, 'Credit Card', 'Completed'),
+(6, 6, '2024-01-28 13:47:00', 179.98, 'PayPal', 'Pending'),
+(7, 7, '2024-02-01 10:17:00', 89.99, 'Credit Card', 'Completed'),
+(8, 8, '2024-02-03 15:32:00', 44.99, 'Bank Transfer', 'Pending'),
+(9, 9, '2024-02-05 09:47:00', 749.98, 'Credit Card', 'Completed'),
+(10, 10, '2024-02-08 12:12:00', 109.98, 'PayPal', 'Completed'),
+(11, 11, '2024-02-10 16:22:00', 259.97, 'Credit Card', 'Completed'),
+(12, 12, '2024-02-12 14:32:00', 129.99, 'Debit Card', 'Completed'),
+(13, 13, '2024-02-15 11:42:00', 94.98, 'Credit Card', 'Failed'),
+(14, 14, '2024-02-18 10:02:00', 54.99, 'PayPal', 'Pending'),
+(15, 15, '2024-02-20 15:17:00', 249.98, 'Credit Card', 'Completed'),
+(16, 16, '2024-02-23 13:27:00', 79.99, 'Bank Transfer', 'Completed'),
+(17, 17, '2024-02-25 09:32:00', 149.99, 'Credit Card', 'Completed'),
+(18, 18, '2024-02-28 14:52:00', 44.99, 'PayPal', 'Pending'),
+(19, 19, '2024-03-02 11:07:00', 739.97, 'Credit Card', 'Completed'),
+(20, 20, '2024-03-04 16:42:00', 119.99, 'Debit Card', 'Processing'),
+(21, 21, '2024-03-07 10:57:00', 119.98, 'Credit Card', 'Completed'),
+(22, 22, '2024-03-09 13:22:00', 34.99, 'PayPal', 'Completed'),
+(23, 23, '2024-03-12 09:37:00', 224.98, 'Credit Card', 'Completed'),
+(24, 24, '2024-03-15 15:47:00', 179.98, 'Bank Transfer', 'Processing'),
+(25, 25, '2024-03-18 12:02:00', 69.98, 'Credit Card', 'Completed'),
+(26, 26, '2024-03-21 14:12:00', 899.99, 'PayPal', 'Completed'),
+(27, 27, '2024-03-24 10:32:00', 199.99, 'Credit Card', 'Pending'),
+(28, 28, '2024-03-27 16:17:00', 89.98, 'Debit Card', 'Completed'),
+(29, 29, '2024-03-30 11:52:00', 159.99, 'Credit Card', 'Processing'),
+(30, 30, '2024-04-02 13:42:00', 124.98, 'PayPal', 'Completed');
+
+-- ============================================
+-- Reset AUTO_INCREMENT values (for MySQL)
+-- ============================================
+ALTER TABLE Customers AUTO_INCREMENT = 21;
+ALTER TABLE Addresses AUTO_INCREMENT = 41;
+ALTER TABLE Categories AUTO_INCREMENT = 9;
+ALTER TABLE Products AUTO_INCREMENT = 26;
+ALTER TABLE Orders AUTO_INCREMENT = 31;
+ALTER TABLE Order_Items AUTO_INCREMENT = 59;
+ALTER TABLE Payments AUTO_INCREMENT = 31;
+
+-- ============================================
+-- Create Indexes (for performance)
+-- ============================================
+CREATE INDEX idx_orders_customer ON Orders(customer_id);
+CREATE INDEX idx_products_category ON Products(category_id);
+CREATE INDEX idx_order_items_order ON Order_Items(order_id);
+CREATE INDEX idx_payments_order ON Payments(order_id);
